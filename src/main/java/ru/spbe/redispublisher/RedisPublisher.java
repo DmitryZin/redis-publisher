@@ -13,7 +13,7 @@ import java.util.Set;
 @RequiredArgsConstructor
 public class RedisPublisher<T> {
     private final Redis redis;
-    private IRedisSet set;
+    private final   IRedisSet set;
     private final ObjectMapper mapper;
 
     public void addValue(T value) throws JsonProcessingException {
