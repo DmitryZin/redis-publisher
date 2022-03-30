@@ -10,6 +10,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ *  Класс {@link RedisPublisher} реализует публикацию данных в БД Redis
+ *
+ *  * Требует  {@link Redis} - подключение к БД
+ *  * Требует  {@link RedisSet} - описание хранения данных
+ *  * Требует  {@link ObjectMapper} - для сериализации, чтоб не создавать свой экземпляр для каждого класса
+ */
+
 @RequiredArgsConstructor
 public class RedisPublisher<T> {
     private final Redis redis;
